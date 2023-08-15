@@ -1,0 +1,12 @@
+<div class="mx-auto" style="width: 18rem;">
+  <ul>
+    <h2 class="mb-4 mt-4">My Tasks</h2>
+    <% @tasks.each do |task| %>
+      <div class="card">
+        <input type="checkbox" name="" id="">
+        <%= link_to task.title, task_path(task.id) %>
+      </div>
+    <% end %>
+    <%= link_to "Create new todo", tasks_new_path %>
+  </ul>
+</div>
